@@ -3,11 +3,6 @@ name: Setup deploy environment
 runs:
     using: "composite"
 
-    env:
-      AWS_DEFAULT_REGION: ${{ secrets.DEPLOY_AWS_DEFAULT_REGION }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOY_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOY_AWS_SECRET_ACCESS_KEY }}
-
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2
